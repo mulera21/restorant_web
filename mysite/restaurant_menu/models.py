@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 MEAL_TYPE = (
     ("starters", "Starters"),
     ("salad", "Salad"),
@@ -24,6 +25,8 @@ class Item(models.Model):
     status = models.IntegerField(choices=STATUS, default=1)
     date_created = models.DateTimeField(auto_now=True)
     date_updated = models.DateTimeField(auto_now=True)
+
+
 
     def __str__(self):
         return self.meal
