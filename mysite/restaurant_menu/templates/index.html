@@ -7,7 +7,13 @@
 <body>
     <h1>Restaurant Menu</h1>
     {% for meal in meals %}
-        <h3>{{ meal.1 }}</h3>
+        <h2>{{ meal.1 }}</h2>
+    {% for m in item_list %}
+        <p>{{ m.meal}}</p>
+       <p><{{ m.meal }}</p>
+        <p>{{ m.description }}</p>
+
+    {% endfor %}
     {% endfor %}
 
 
