@@ -3,7 +3,8 @@
 {% block content %}
 <div class="container" xmlns="http://www.w3.org/1999/html">
     <h1>Restaurant Menu</h1>
-    <l class="list-group list-group-flush">
+    <ul class="list-group list-group-flush">
+        <div class="row">
         {% for meal in meals %}
             <h2 class="pt -5">{{ meal.1 }}</h2>
                 {% for m in item_list %}
@@ -22,8 +23,8 @@
                                 <p>{{ m.price }}</p>
                             </li>
                         {% else%}
-                            <li  class="list-group-item d-flex justify-content-between align-items-center border-0">
-                                <img src = "{{m.image.url}}">
+                            <li  class="list-group-item d-flex justify-content-between align-items-center  center-block text-center">
+                                <img src = " {{m.image.url}}">
                             </li >
                              <li  class="list-group-item d-flex justify-content-between align-items-center">
                                  <a href="{% url 'menu_item' m.pk %}"><h3>{{ m.meal }}</h3></a>
@@ -39,6 +40,7 @@
                      {% endif %}
                 {% endfor %}
         {% endfor %}
+            </div>
         </li>
 </div>
 {% endblock content %}
