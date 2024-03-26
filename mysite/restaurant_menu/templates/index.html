@@ -12,11 +12,11 @@
                   {% if m.meal_type == meal.0%}
                     {% if m.status == 0 %}
                          <img src = "{{m.image.url}}">
-                         <a href="https://example.com"><h3><del>{{ m.meal }}</del></h3></a>
+                         <a href="{% url 'menu_item' %}"><h3><del>{{ m.meal }}</del></h3></a>
                          <p>{{ m.description }}</p>
                     {% else%}
                           <img src = "{{m.image.url}}">
-                         <a href="https://example.com"><h3>{{ m.meal }}</h3></a>
+                         <a href="{% url 'menu_item' %}"><h3>{{ m.meal }}</h3></a>
                          <p>{{ m.description }}</p>
                     {% endif %}
                  {% endif %}
