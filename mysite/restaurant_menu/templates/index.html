@@ -3,36 +3,36 @@
 {% block content %}
 <div class="container" xmlns="http://www.w3.org/1999/html">
     <h1>Restaurant Menu</h1>
-    <ul class="list-group list-group-flush">
+    <l class="list-group list-group-flush">
         {% for meal in meals %}
             <h2 class="pt -5">{{ meal.1 }}</h2>
                 {% for m in item_list %}
                       {% if m.meal_type == meal.0%}
                         {% if m.status == 0 %}
                             <li  class="list-group-item d-flex justify-content-between align-items-center">
-                             <img src = "{{m.image.url}}">
+                                <img src = "{{m.image.url}}">
                             </li>
-                             <li>
+                             <li  class="list-group-item d-flex justify-content-between align-items-center">
                                  <a href="{% url 'menu_item' m.pk %}"><h3><del>{{ m.meal }}</del></h3></a>
                              </li>
-                            <li>
-                             <p>{{ m.description }}</p>
+                            <li  class="list-group-item d-flex justify-content-between align-items-center">
+                                <p>{{ m.description }}</p>
                             </li>
-                             </ul>
-                             <p>{{ m.price }}</p>
+                             <li  class="list-group-item d-flex justify-content-between align-items-center">
+                                <p>{{ m.price }}</p>
                             </li>
                         {% else%}
                             <li  class="list-group-item d-flex justify-content-between align-items-center border-0">
-                             <img src = "{{m.image.url}}">
+                                <img src = "{{m.image.url}}">
                             </li >
                              <li  class="list-group-item d-flex justify-content-between align-items-center">
                                  <a href="{% url 'menu_item' m.pk %}"><h3>{{ m.meal }}</h3></a>
                              </li>
                             <li  class="list-group-item d-flex justify-content-between align-items-center">
-                             <p>{{ m.description }}</p>
+                                <p>{{ m.description }}</p>
                             </li>
                              <li  class="list-group-item d-flex justify-content-between align-items-center">
-                             <p>{{ m.price }}</p>
+                                <p>{{ m.price }}</p>
                             </li>
 
                         {% endif %}
