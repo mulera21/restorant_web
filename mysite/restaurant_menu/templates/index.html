@@ -8,12 +8,13 @@
     <h1>Restaurant Menu</h1>
     {% for meal in meals %}
         <h2>{{ meal.1 }}</h2>
-    {% for m in item_list %}
-       <img src = "{{m.image.url}}">
-       <p><{{ m.meal }}</p>
-        <p>{{ m.description }}</p>
-
-    {% endfor %}
+            {% for m in item_list %}
+                  {% if m.meal_type == meal.0%}
+                    <img src = "{{m.image.url}}">
+                     <p><{{ m.meal}}</p>
+                    <p>{{ m.description }}</p>
+                 {% endif %}
+            {% endfor %}
     {% endfor %}
 
 
