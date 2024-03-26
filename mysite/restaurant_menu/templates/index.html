@@ -23,9 +23,9 @@
                                 <p>{{ m.price }}</p>
                             </li>
                         {% else%}
-                            <li  class="list-group-item d-flex justify-content-between align-items-center  center-block text-center">
-                                <img src = " {{m.image.url}}">
-                            </li >
+
+                                <img class="card-img-top" src = " {{m.image.url}}">
+
                              <li  class="list-group-item d-flex justify-content-between align-items-center">
                                  <a href="{% url 'menu_item' m.pk %}"><h3>{{ m.meal }}</h3></a>
                              </li>

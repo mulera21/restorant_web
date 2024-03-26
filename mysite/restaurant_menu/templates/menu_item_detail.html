@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+<div class="container">
      <img src = "{{item.image.url}}">
-    <h1>{{ item.meal }}</h1>
+    <h1 class="pt-5">{{ item.meal }}</h1>
     <p>{{ item.description }}</p>
      <p>{{ item.price }}</p>
+</div>
 
-
-{% endblock content %}
+{% endblock content %} =
