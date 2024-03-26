@@ -14,10 +14,12 @@
                          <img src = "{{m.image.url}}">
                          <a href="{% url 'menu_item' m.pk %}"><h3><del>{{ m.meal }}</del></h3></a>
                          <p>{{ m.description }}</p>
+                         <p>{{ m.price }}</p>
                     {% else%}
                           <img src = "{{m.image.url}}">
                          <a href="{% url 'menu_item' m.pk %}"><h3>{{ m.meal }}</h3></a>
                          <p>{{ m.description }}</p>
+                        <p>{{ m.price }}</p>
                     {% endif %}
                  {% endif %}
             {% endfor %}
